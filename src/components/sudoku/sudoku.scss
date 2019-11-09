@@ -15,22 +15,13 @@
 
     }
 
-    input:nth-child(3){
-      border-right:  1.5px solid rgb(31, 30, 30);
-    }
-
-    input:nth-child(6){
+    input:nth-child(3), input:nth-child(6){
       border-right:  1.5px solid rgb(31, 30, 30);
     }
  
   }
 
-  .row:nth-child(3){
-    input{
-      border-bottom: 1.5px solid rgb(31, 30, 30);
-    }
-  }
-  .row:nth-child(6){
+  .row:nth-child(3), .row:nth-child(6){
     input{
       border-bottom: 1.5px solid rgb(31, 30, 30);
     }
