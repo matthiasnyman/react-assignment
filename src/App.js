@@ -10,7 +10,7 @@ import './App.scss';
 
 import Stopwatch from './components/stopwatch/Stopwatch';
 import Todo from './components/Todo/Todo';
-import Sudoku from './components/sodoku/Sodoku';
+import Sudoku from './components/sudoku/Sudoku';
 import Home from './components/Home/Home';
 
 
@@ -46,7 +46,7 @@ function App(){
           <Todo  />
         </Route>
         <Route path="/sudoku">
-          {/* <Sudoku  /> */}
+          <Sudoku  />
         </Route>
         <Route path="/">
           <Home  />
