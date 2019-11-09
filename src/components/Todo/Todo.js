@@ -23,11 +23,7 @@ class Todo extends React.Component {
   }
 
   getTodos() {
-<<<<<<< HEAD
     fetch("/todos")
-=======
-    fetch("http://localhost:4000/todos")
->>>>>>> parent of 67f4917... bild
       .then(res => res.json())
       .then(
         result => {
@@ -44,7 +40,6 @@ class Todo extends React.Component {
       );
   }
 
-<<<<<<< HEAD
   handleChange(e, test) {
     if (test === true) {
       this.setState(prevState => {
@@ -59,23 +54,6 @@ class Todo extends React.Component {
         };
       })
       fetch(`/todos/${e._id}`, {
-=======
-  handleChange(e) {
-    if (typeof e === "number") {
-      // this.setState(prevState => {
-      //   const updatedTodos = prevState.todos.map(todo => {
-      //     if (todo.id === e) {
-      //       todo.completed = !todo.completed;
-      //     }
-      //     return todo;
-      //   });
-      //   return {
-      //     todos: updatedTodos
-      //   };
-      // });
-
-      fetch(`http://localhost:4000/todos/${e}`, {
->>>>>>> parent of 67f4917... bild
         method: "PATCH",
         body: JSON.stringify({
           completed: !this.state.completed
@@ -85,12 +63,7 @@ class Todo extends React.Component {
         }
       })
         .then(response => response.json())
-<<<<<<< HEAD
         .then(() => this.getTodos());
-=======
-        .then(json => this.getTodos());
-
->>>>>>> parent of 67f4917... bild
     } else {
       this.setState(prevState => {
         const updatedTodos = prevState.todos.map(todo => {
@@ -168,13 +141,8 @@ class Todo extends React.Component {
   onRemove(id) {
     // const filteredArray = this.state.todos.filter(item => item.id !== id);
     // this.setState({ todos: filteredArray });
-<<<<<<< HEAD
     console.log(id);
     fetch(`/todos/${id._id}`, {
-=======
-
-    fetch(`http://localhost:4000/todos/${id}`, {
->>>>>>> parent of 67f4917... bild
       method: "DELETE"
     }).then(() => this.getTodos());
   }
